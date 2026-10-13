@@ -1,0 +1,132 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  background-color: #030014;
+  color: #ffffff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+#root {
+  width: 100%;
+  min-height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+/* Regla global: Todas las secciones permiten que el fondo de galaxia sea visible */
+section {
+  background-color: transparent;
+  position: relative;
+}
+
+.Hero-Section {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.Hero {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+}
+
+.First{
+  display: flex;
+  align-items: center;
+}
+
+.Second {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+  margin-top: 125px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.Isquierda-Second {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.Title-second {
+  color: #ffffff;
+  font-size: 55px; /* Ajustado ligeramente para que luzca imponente pero quepa bien en pantalla */
+  font-weight: 700;
+  line-height: 1.1; /* Controla la distancia entre líneas si el título salta de renglón */
+  margin: 0 0 20px 0; /* Margen inferior limpio para separar del botón, sin márgenes laterales forzados */
+  text-align: left;
+  margin: 0 0 15px 0;
+}
+
+.Description{
+  color: #ffffff;
+  font-size: 25px;
+   font-weight: 700;
+  line-height: 1.1; /* Controla la distancia entre líneas si el título salta de renglón */
+  margin: 0 0 20px 0; /* Margen inferior limpio para separar del botón, sin márgenes laterales forzados */
+  text-align: left;
+  margin: 0 0 15px 0;
+}
+
+.Isquierda-Second button {
+  /* Degradado usando exactamente tus colores de izquierda a derecha */
+  background: linear-gradient(90deg, #9340ff 0%, #ff3c5f 100%);
+  color: #ffffff;
+  border: none;
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 30px; /* Bordes completamente redondeados como en tu captura */
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(147, 64, 255, 0.3); /* Sombra base sutil basada en tu morado */
+  transition: all 0.3s ease; /* Transición suave para el hover */
+}
+
+/* Efecto hover adecuado al tono de la página y los colores del botón */
+.Isquierda-Second button:hover {
+  transform: translateY(-3px); /* Eleva ligeramente el botón */
+  box-shadow: 0 6px 20px rgba(255, 60, 95, 0.4); /* Cambia la sombra hacia el tono fucsia al pasar el cursor */
+  filter: brightness(1.1); /* Realza ligeramente el brillo general del degradado */
+}
+
+.Isquierda-Second button:active {
+  transform: translateY(-1px); /* Efecto al hacer clic */
+}  
+
+.Derecha-Second {
+  color: #ffffff;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+.Title{
+  font-size: 25px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #fff;
+}
+
+.About-Section {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.About {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+}

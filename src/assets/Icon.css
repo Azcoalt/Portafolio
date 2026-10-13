@@ -1,0 +1,37 @@
+.icon {
+  position: relative;
+  width: 75px;              /* <- cambia solo esto para escalar el icono */
+  aspect-ratio: 200 / 90;   /* mantiene la proporción original */
+  margin: 20px;
+}
+
+.icon .facet {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Cara superior izquierda (Azul brillante a Violeta profundo) */
+.facet.top-left {
+  clip-path: polygon(50% 0%, 0% 50%, 22.5% 50%, 50% 27.78%);
+  background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
+}
+
+/* Cara superior derecha (Violeta claro a Magenta vibrante) */
+.facet.top-right {
+  clip-path: polygon(50% 0%, 100% 50%, 77.5% 50%, 50% 27.78%);
+  background: linear-gradient(225deg, #c084fc 0%, #a855f7 100%);
+}
+
+/* Cara inferior izquierda (Magenta profundo a Rosa neón) */
+.facet.bottom-left {
+  clip-path: polygon(0% 50%, 50% 100%, 50% 72.22%, 22.5% 50%);
+  background: linear-gradient(180deg, #9333ea 0%, #f43f5e 100%);
+}
+
+/* Cara inferior derecha (Rosa neón a Coral brillante) */
+.facet.bottom-right {
+  clip-path: polygon(100% 50%, 50% 100%, 50% 72.22%, 77.5% 50%);
+  background: linear-gradient(180deg, #ec4899 0%, #f43f5e 100%);
+}

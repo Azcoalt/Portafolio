@@ -1,0 +1,423 @@
+/* ==========================================================================
+   Fondo de Galaxia (100% CSS Nativo)
+   Diseñado para cubrir todo el sitio web de forma persistente y fluida.
+   ========================================================================== */
+
+/* Contenedor principal de la galaxia: fijado a toda la pantalla */
+.galaxy-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+  background-color: #030014;
+}
+
+/* Nebulosa de fondo: nubes de gas cósmico con colores violeta, azul y magenta */
+.galaxy-nebula {
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  width: 140%;
+  height: 140%;
+  background:
+    radial-gradient(ellipse 65% 55% at 20% 20%, rgba(147, 51, 234, 0.28) 0%, transparent 65%),
+    radial-gradient(ellipse 55% 50% at 80% 25%, rgba(56, 189, 248, 0.22) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 60% at 70% 75%, rgba(236, 72, 153, 0.22) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 50% at 25% 80%, rgba(99, 102, 241, 0.24) 0%, transparent 60%),
+    radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.16) 0%, transparent 55%);
+  filter: blur(45px);
+  transform-origin: center center;
+  animation: galaxyNebulaFloat 24s ease-in-out infinite alternate;
+}
+
+/* Núcleo o brazo galáctico central con resplandor suave */
+.galaxy-core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80vw;
+  height: 50vh;
+  transform: translate(-50%, -50%) rotate(-28deg);
+  background: radial-gradient(
+    ellipse at center,
+    rgba(192, 132, 252, 0.2) 0%,
+    rgba(147, 51, 234, 0.15) 30%,
+    rgba(59, 130, 246, 0.1) 50%,
+    transparent 70%
+  );
+  filter: blur(55px);
+  animation: galaxyCorePulse 14s ease-in-out infinite alternate;
+}
+
+/* Capa 1 de estrellas: Pequeñas y densas (1px) */
+.galaxy-stars-small {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow:
+    12.29vw 50.25vh rgba(251, 207, 232, 0.75),
+    64.57vw 94.84vh rgba(255, 255, 255, 0.95),
+    89.09vw 62.03vh rgba(199, 210, 254, 0.8),
+    78.05vw 54.73vh rgba(199, 210, 254, 0.8),
+    74.85vw 58.57vh rgba(255, 255, 255, 0.95),
+    0.75vw 8.49vh rgba(224, 231, 255, 0.85),
+    81.36vw 45.02vh rgba(199, 210, 254, 0.8),
+    67.76vw 21.31vh rgba(224, 231, 255, 0.85),
+    34.92vw 99.39vh rgba(224, 231, 255, 0.85),
+    80.21vw 99.47vh rgba(251, 207, 232, 0.75),
+    63.63vw 72.09vh rgba(255, 255, 255, 0.75),
+    55.69vw 29.42vh rgba(199, 210, 254, 0.8),
+    14.45vw 64.33vh rgba(251, 207, 232, 0.75),
+    31.09vw 84.43vh rgba(224, 231, 255, 0.85),
+    36.49vw 42.3vh rgba(199, 210, 254, 0.8),
+    88.71vw 55.39vh rgba(255, 255, 255, 0.75),
+    42.62vw 79.95vh rgba(251, 207, 232, 0.75),
+    87.17vw 39.92vh rgba(251, 207, 232, 0.75),
+    26.11vw 42.08vh rgba(199, 210, 254, 0.8),
+    51.28vw 80.21vh rgba(251, 207, 232, 0.75),
+    22.73vw 13.27vh rgba(255, 255, 255, 0.75),
+    95.81vw 52.3vh rgba(255, 255, 255, 0.75),
+    71.51vw 43.01vh rgba(255, 255, 255, 0.95),
+    48.23vw 23.16vh rgba(255, 255, 255, 0.75),
+    62.54vw 45.72vh rgba(199, 210, 254, 0.8),
+    71.24vw 95.5vh rgba(251, 207, 232, 0.75),
+    25.35vw 40.31vh rgba(224, 231, 255, 0.85),
+    54.77vw 64.54vh rgba(199, 210, 254, 0.8),
+    80.18vw 40.29vh rgba(255, 255, 255, 0.95),
+    29.64vw 27.13vh rgba(255, 255, 255, 0.75),
+    15.33vw 87.82vh rgba(199, 210, 254, 0.8),
+    80.05vw 92.27vh rgba(224, 231, 255, 0.85),
+    91.73vw 26.25vh rgba(199, 210, 254, 0.8),
+    46.7vw 76.4vh rgba(199, 210, 254, 0.8),
+    80.49vw 55.73vh rgba(255, 255, 255, 0.75),
+    82.81vw 31.85vh rgba(255, 255, 255, 0.75),
+    43.91vw 71.44vh rgba(251, 207, 232, 0.75),
+    26.12vw 91.78vh rgba(255, 255, 255, 0.95),
+    96.26vw 83.9vh rgba(199, 210, 254, 0.8),
+    93.57vw 64.71vh rgba(199, 210, 254, 0.8),
+    37.14vw 19.76vh rgba(199, 210, 254, 0.8),
+    14.99vw 91.23vh rgba(255, 255, 255, 0.75),
+    0.52vw 57.98vh rgba(255, 255, 255, 0.75),
+    60.9vw 20.18vh rgba(255, 255, 255, 0.75),
+    61.99vw 74.93vh rgba(224, 231, 255, 0.85),
+    66.68vw 63.41vh rgba(255, 255, 255, 0.95),
+    1.01vw 66.29vh rgba(251, 207, 232, 0.75),
+    76.68vw 94.54vh rgba(199, 210, 254, 0.8),
+    68.79vw 93.31vh rgba(251, 207, 232, 0.75),
+    22.57vw 58.71vh rgba(251, 207, 232, 0.75),
+    87.22vw 50.47vh rgba(255, 255, 255, 0.75),
+    41.86vw 16.35vh rgba(255, 255, 255, 0.95),
+    78.06vw 91.09vh rgba(224, 231, 255, 0.85),
+    50.76vw 39.15vh rgba(255, 255, 255, 0.95),
+    51.98vw 19.97vh rgba(255, 255, 255, 0.75),
+    95.42vw 39.05vh rgba(255, 255, 255, 0.75),
+    5.59vw 34.85vh rgba(224, 231, 255, 0.85),
+    93.02vw 94.06vh rgba(255, 255, 255, 0.75),
+    51.03vw 32.95vh rgba(224, 231, 255, 0.85),
+    45.06vw 90.98vh rgba(199, 210, 254, 0.8),
+    94.43vw 57.09vh rgba(255, 255, 255, 0.95),
+    15.74vw 51.94vh rgba(199, 210, 254, 0.8),
+    62.21vw 45.92vh rgba(255, 255, 255, 0.95),
+    67.67vw 7.38vh rgba(199, 210, 254, 0.8),
+    3.88vw 64.58vh rgba(255, 255, 255, 0.95),
+    4.98vw 54.43vh rgba(255, 255, 255, 0.75),
+    45.23vw 75.22vh rgba(255, 255, 255, 0.95),
+    48.4vw 67.68vh rgba(255, 255, 255, 0.75),
+    13.28vw 52.96vh rgba(251, 207, 232, 0.75),
+    89.07vw 14.13vh rgba(255, 255, 255, 0.95),
+    39.11vw 42.61vh rgba(199, 210, 254, 0.8),
+    86.44vw 38.44vh rgba(255, 255, 255, 0.95),
+    34.56vw 26.58vh rgba(199, 210, 254, 0.8),
+    99.43vw 81.18vh rgba(224, 231, 255, 0.85),
+    46.8vw 32.75vh rgba(199, 210, 254, 0.8),
+    44.51vw 52.7vh rgba(251, 207, 232, 0.75),
+    79.37vw 81.3vh rgba(255, 255, 255, 0.95),
+    23.4vw 94.91vh rgba(199, 210, 254, 0.8),
+    64.42vw 40.89vh rgba(255, 255, 255, 0.95),
+    95.66vw 35.34vh rgba(255, 255, 255, 0.95),
+    35.32vw 68.53vh rgba(251, 207, 232, 0.75),
+    21.94vw 61.96vh rgba(224, 231, 255, 0.85),
+    55.52vw 56.74vh rgba(255, 255, 255, 0.95),
+    56.91vw 56.22vh rgba(251, 207, 232, 0.75),
+    13.63vw 77.87vh rgba(255, 255, 255, 0.75),
+    95.03vw 17.46vh rgba(255, 255, 255, 0.75),
+    75.65vw 72.01vh rgba(255, 255, 255, 0.95),
+    64.45vw 11.03vh rgba(224, 231, 255, 0.85),
+    27.9vw 83.4vh rgba(224, 231, 255, 0.85),
+    92.75vw 16.48vh rgba(224, 231, 255, 0.85),
+    6.73vw 41.25vh rgba(224, 231, 255, 0.85),
+    41.54vw 2.03vh rgba(255, 255, 255, 0.75),
+    23.79vw 31.18vh rgba(255, 255, 255, 0.75),
+    68.4vw 57.57vh rgba(224, 231, 255, 0.85),
+    31.68vw 45.65vh rgba(251, 207, 232, 0.75),
+    4.26vw 40.51vh rgba(251, 207, 232, 0.75),
+    21.85vw 46.3vh rgba(255, 255, 255, 0.75),
+    68.46vw 85.77vh rgba(224, 231, 255, 0.85),
+    39.02vw 94.26vh rgba(224, 231, 255, 0.85),
+    6.21vw 71.3vh rgba(255, 255, 255, 0.75),
+    28.36vw 33.22vh rgba(255, 255, 255, 0.75),
+    29.9vw 41.75vh rgba(251, 207, 232, 0.75),
+    89.89vw 54.17vh rgba(224, 231, 255, 0.85),
+    20.05vw 6.06vh rgba(255, 255, 255, 0.75),
+    16.55vw 12.65vh rgba(255, 255, 255, 0.75),
+    12.94vw 35.55vh rgba(224, 231, 255, 0.85),
+    3.35vw 57.73vh rgba(224, 231, 255, 0.85),
+    41.61vw 37.84vh rgba(199, 210, 254, 0.8),
+    66.1vw 77.22vh rgba(255, 255, 255, 0.95),
+    54.25vw 65.99vh rgba(251, 207, 232, 0.75),
+    68.19vw 39.79vh rgba(224, 231, 255, 0.85),
+    78.37vw 23.1vh rgba(255, 255, 255, 0.75),
+    27.91vw 47.91vh rgba(224, 231, 255, 0.85),
+    95.39vw 14.23vh rgba(251, 207, 232, 0.75),
+    9.36vw 18.25vh rgba(255, 255, 255, 0.75),
+    64.87vw 95.67vh rgba(251, 207, 232, 0.75),
+    81.67vw 34.23vh rgba(251, 207, 232, 0.75),
+    75.2vw 31.93vh rgba(255, 255, 255, 0.75),
+    62.66vw 24.54vh rgba(255, 255, 255, 0.75),
+    96.55vw 67.74vh rgba(255, 255, 255, 0.95),
+    92.3vw 90.2vh rgba(199, 210, 254, 0.8),
+    70.52vw 36.13vh rgba(255, 255, 255, 0.95),
+    56.1vw 27.8vh rgba(255, 255, 255, 0.95),
+    37.6vw 45.97vh rgba(199, 210, 254, 0.8),
+    54.83vw 47.43vh rgba(251, 207, 232, 0.75),
+    31.41vw 16.17vh rgba(199, 210, 254, 0.8),
+    15.72vw 88.99vh rgba(224, 231, 255, 0.85),
+    81.06vw 83.17vh rgba(199, 210, 254, 0.8),
+    79.24vw 63.77vh rgba(255, 255, 255, 0.75),
+    30.1vw 54.63vh rgba(224, 231, 255, 0.85);
+  animation: galaxyTwinkleSmall 5s ease-in-out infinite alternate;
+}
+
+/* Capa 2 de estrellas: Medianas con matices de color (1.8px) */
+.galaxy-stars-medium {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.8px;
+  height: 1.8px;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow:
+    14.16vw 73.71vh rgba(255, 255, 255, 0.95),
+    53.31vw 84.63vh rgba(255, 255, 255, 1),
+    30.86vw 4.92vh rgba(244, 114, 182, 0.85),
+    38.18vw 95.85vh rgba(255, 255, 255, 1),
+    80.89vw 66.02vh rgba(255, 255, 255, 1),
+    10.89vw 14.55vh rgba(244, 114, 182, 0.85),
+    33.53vw 26.38vh rgba(255, 255, 255, 0.95),
+    73.5vw 66.06vh rgba(192, 132, 252, 0.9),
+    16.56vw 29.5vh rgba(255, 255, 255, 1),
+    28.77vw 13.77vh rgba(244, 114, 182, 0.85),
+    19.18vw 74.45vh rgba(255, 255, 255, 0.95),
+    84.38vw 64.63vh rgba(244, 114, 182, 0.85),
+    35.71vw 76.96vh rgba(255, 255, 255, 1),
+    17.42vw 51.6vh rgba(192, 132, 252, 0.9),
+    31.65vw 14.83vh rgba(255, 255, 255, 0.95),
+    88.33vw 51.48vh rgba(255, 255, 255, 0.95),
+    83.85vw 6.8vh rgba(56, 189, 248, 0.9),
+    21.9vw 15.77vh rgba(255, 255, 255, 1),
+    25.07vw 11.02vh rgba(56, 189, 248, 0.9),
+    48.47vw 87.02vh rgba(255, 255, 255, 0.95),
+    38.24vw 61.58vh rgba(255, 255, 255, 0.95),
+    34.93vw 90.54vh rgba(255, 255, 255, 0.95),
+    55.5vw 24.96vh rgba(56, 189, 248, 0.9),
+    68.17vw 45.64vh rgba(255, 255, 255, 1),
+    34.67vw 7.33vh rgba(255, 255, 255, 0.95),
+    80.53vw 77.52vh rgba(56, 189, 248, 0.9),
+    75.08vw 22.88vh rgba(56, 189, 248, 0.9),
+    43.33vw 56.1vh rgba(56, 189, 248, 0.9),
+    90.3vw 72.16vh rgba(244, 114, 182, 0.85),
+    40.4vw 18.0vh rgba(244, 114, 182, 0.85),
+    22.3vw 68.73vh rgba(56, 189, 248, 0.9),
+    75.62vw 35.16vh rgba(255, 255, 255, 1),
+    38.28vw 15.78vh rgba(255, 255, 255, 1),
+    65.53vw 13.13vh rgba(56, 189, 248, 0.9),
+    33.07vw 12.17vh rgba(56, 189, 248, 0.9),
+    83.78vw 44.5vh rgba(192, 132, 252, 0.9),
+    54.47vw 27.05vh rgba(56, 189, 248, 0.9),
+    96.75vw 56.07vh rgba(255, 255, 255, 0.95),
+    27.02vw 57.36vh rgba(244, 114, 182, 0.85),
+    40.05vw 54.92vh rgba(56, 189, 248, 0.9),
+    67.24vw 33.85vh rgba(244, 114, 182, 0.85),
+    90.45vw 84.39vh rgba(255, 255, 255, 1),
+    51.65vw 42.52vh rgba(56, 189, 248, 0.9),
+    6.44vw 40.08vh rgba(192, 132, 252, 0.9),
+    1.54vw 55.83vh rgba(56, 189, 248, 0.9),
+    13.43vw 57.82vh rgba(255, 255, 255, 1),
+    41.55vw 77.54vh rgba(244, 114, 182, 0.85),
+    84.78vw 48.31vh rgba(255, 255, 255, 0.95),
+    4.21vw 22.27vh rgba(255, 255, 255, 0.95),
+    65.91vw 93.76vh rgba(56, 189, 248, 0.9),
+    2.26vw 21.21vh rgba(244, 114, 182, 0.85),
+    51.48vw 62.16vh rgba(56, 189, 248, 0.9),
+    8.32vw 69.05vh rgba(255, 255, 255, 1),
+    76.62vw 97.78vh rgba(192, 132, 252, 0.9),
+    33.17vw 22.22vh rgba(244, 114, 182, 0.85);
+  animation: galaxyTwinkleMedium 7s ease-in-out infinite alternate;
+  animation-delay: -2.5s;
+}
+
+/* Capa 3 de estrellas: Grandes con resplandor/halo propio (2.5px) */
+.galaxy-stars-large {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.5px;
+  height: 2.5px;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow:
+    21.22vw 66.97vh 1px #38bdf8, 21.22vw 66.97vh 3px #38bdf8,
+    9.26vw 41.87vh 1px #e879f9, 9.26vw 41.87vh 3px #e879f9,
+    11.59vw 27.55vh 1px #c084fc, 11.59vw 27.55vh 3px #c084fc,
+    5.36vw 54.92vh 1px #e879f9, 5.36vw 54.92vh 3px #e879f9,
+    97.86vw 90.23vh 1px #38bdf8, 97.86vw 90.23vh 3px #38bdf8,
+    34.67vw 32.15vh 1px #c084fc, 34.67vw 32.15vh 3px #c084fc,
+    26.02vw 87.56vh 1px #38bdf8, 26.02vw 87.56vh 3px #38bdf8,
+    4.6vw 49.02vh 1px #ffffff, 4.6vw 49.02vh 3px #ffffff,
+    48.11vw 36.89vh 1px #c084fc, 48.11vw 36.89vh 3px #c084fc,
+    20.48vw 27.82vh 1px #c084fc, 20.48vw 27.82vh 3px #c084fc,
+    30.8vw 58.01vh 1px #c084fc, 30.8vw 58.01vh 3px #c084fc,
+    85.57vw 72.14vh 1px #38bdf8, 85.57vw 72.14vh 3px #38bdf8,
+    97.14vw 61.41vh 1px #38bdf8, 97.14vw 61.41vh 3px #38bdf8,
+    48.94vw 65.73vh 1px #38bdf8, 48.94vw 65.73vh 3px #38bdf8,
+    18.75vw 97.91vh 1px #e879f9, 18.75vw 97.91vh 3px #e879f9,
+    75.41vw 95.47vh 1px #c084fc, 75.41vw 95.47vh 3px #c084fc,
+    62.79vw 91.7vh 1px #e879f9, 62.79vw 91.7vh 3px #e879f9,
+    3.83vw 24.61vh 1px #c084fc, 3.83vw 24.61vh 3px #c084fc,
+    50.79vw 52.6vh 1px #e879f9, 50.79vw 52.6vh 3px #e879f9,
+    78.58vw 27.53vh 1px #c084fc, 78.58vw 27.53vh 3px #c084fc;
+  animation: galaxyTwinkleLarge 4s ease-in-out infinite alternate;
+  animation-delay: -1.2s;
+}
+
+/* Estrellas fugaces (Shooting Stars / Cometas) */
+.galaxy-shooting-star {
+  position: absolute;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(224, 231, 255, 0.6) 30%, transparent 100%);
+  border-radius: 999px;
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 10px rgba(168, 85, 247, 0.6));
+  opacity: 0;
+  pointer-events: none;
+}
+
+.galaxy-shooting-star:nth-child(1) {
+  top: 15%;
+  right: 10%;
+  width: 120px;
+  transform: rotate(-35deg);
+  animation: galaxyShoot 8s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+.galaxy-shooting-star:nth-child(2) {
+  top: 35%;
+  right: 25%;
+  width: 150px;
+  transform: rotate(-32deg);
+  animation: galaxyShoot 11s ease-in-out infinite;
+  animation-delay: 5.5s;
+}
+
+.galaxy-shooting-star:nth-child(3) {
+  top: 5%;
+  right: 40%;
+  width: 100px;
+  transform: rotate(-38deg);
+  animation: galaxyShoot 14s ease-in-out infinite;
+  animation-delay: 9s;
+}
+
+/* Viñeta sutil en los bordes para mayor profundidad espacial */
+.galaxy-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, transparent 50%, rgba(2, 0, 15, 0.65) 100%);
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   Animaciones Keyframes (Aceleradas por GPU para máximo rendimiento a 60fps)
+   ========================================================================== */
+
+@keyframes galaxyNebulaFloat {
+  0% {
+    transform: scale(1) translate(0%, 0%) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.06) translate(-2%, 2%) rotate(1.5deg);
+  }
+  100% {
+    transform: scale(1.02) translate(1.5%, -1.5%) rotate(-1deg);
+  }
+}
+
+@keyframes galaxyCorePulse {
+  0% {
+    opacity: 0.65;
+    transform: translate(-50%, -50%) rotate(-28deg) scale(0.95);
+  }
+  100% {
+    opacity: 0.95;
+    transform: translate(-50%, -50%) rotate(-26deg) scale(1.05);
+  }
+}
+
+@keyframes galaxyTwinkleSmall {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes galaxyTwinkleMedium {
+  0% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 0.95;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes galaxyTwinkleLarge {
+  0% {
+    opacity: 0.55;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes galaxyShoot {
+  0% {
+    transform: rotate(-35deg) translateX(0);
+    opacity: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  5% {
+    transform: rotate(-35deg) translateX(-650px);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(-35deg) translateX(-650px);
+    opacity: 0;
+  }
+}
