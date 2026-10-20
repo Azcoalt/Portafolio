@@ -114,7 +114,6 @@ section {
 
 .Title{
   font-size: 25px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
   color: #fff;
 }
 
@@ -129,4 +128,91 @@ section {
   background-color: transparent;
   width: 100%;
   height: 100%;
+}
+
+.Experiencie{
+  font-size: 50px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.Table-Experience {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;              /* Espacio entre cada experiencia */
+  width: 100%;
+  max-width: 900px;       /* Ancho máximo para que no se extienda demasiado en pantallas grandes */
+  margin: 0 auto;         /* Centra la tabla en la sección */
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+/* Cada fila actúa como una tarjeta o renglón de tabla moderno */
+.Experience-Row {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* 2 partes para la info y 1 parte para el tiempo */
+  gap: 30px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.03); /* Fondo translúcido muy sutil tipo tarjeta */
+  border: 1px solid rgba(255, 255, 255, 0.08); /* Borde elegante y tenue */
+  padding: 24px 30px;
+  border-radius: 16px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Efecto hover sutil al pasar el cursor sobre cada experiencia */
+.Experience-Row:hover {
+  transform: translateY(-3px);
+  border-color: rgba(147, 64, 255, 0.4); /* Resalta con tu tono morado corporativo */
+}
+
+.Title-Empresa {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 8px 0;
+  text-align: left;
+  letter-spacing: 0.5px;
+}
+
+.Description {
+  font-size: 15px;
+  color: #94a3b8; /* Tono grisáceo elegante que contrasta perfecto con el fondo oscuro */
+  line-height: 1.5;
+  margin: 0;
+  text-align: left;
+}
+
+.exact-time {
+  font-size: 14px;
+  font-weight: 600;
+  color: #c084fc; /* Tonalidad violeta clara para destacar las fechas con estilo */
+  text-align: right;
+  margin: 0;
+}
+
+/* Adaptabilidad para pantallas más pequeñas (Responsive) */
+@media (max-width: 768px) {
+  .Experience-Row {
+    grid-template-columns: 1fr; /* En pantallas chicas se acomoda en una sola columna */
+    gap: 15px;
+  }
+  .exact-time {
+    text-align: left; /* Alinea la fecha a la izquierda en móviles */
+    color: #e2e8f0;
+  }
+}
+
+
+.Proyects-Section {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.Title-Proyecs{
+  font-size: 50px;
+  color: #ffffff;
+  text-align: center;
 }
