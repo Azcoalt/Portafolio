@@ -110,6 +110,7 @@ section {
   display: flex;
   justify-content: center; 
   align-items: center;
+  width: 100%;
 }
 
 .Title{
@@ -208,11 +209,166 @@ section {
   width: 100%;
   min-height: 100vh;
   margin: 0;
-  padding: 0;
+  padding: 60px 40px; /* Añadimos espacio arriba/abajo y a los lados */
+  box-sizing: border-box;
 }
 
-.Title-Proyecs{
+.Title-Proyecs {
   font-size: 50px;
   color: #ffffff;
   text-align: center;
+  margin-bottom: 50px; /* Separa el título de las tarjetas */
+}
+
+.Table-Proyects {
+  display: grid;
+  /* Crea exactamente 3 columnas iguales que se adaptan al espacio disponible */
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 30px; /* Espacio de separación entre las tarjetas (tanto horizontal como vertical) */
+  max-width: 1200px; /* Ancho máximo para que no se estiren demasiado en pantallas gigantes */
+  margin: 0 auto; /* Centra toda la cuadrícula en la pantalla */
+}
+
+/* Opcional: Responsivo para pantallas medianas o celulares */
+@media (max-width: 1024px) {
+  .Table-Proyects {
+    grid-template-columns: repeat(2, 1fr); /* En tablets o pantallas medianas baja a 2 columnas */
+  }
+}
+
+@media (max-width: 768px) {
+  .Table-Proyects {
+    grid-template-columns: 1fr; /* En celulares baja a 1 sola columna para que luzca bien */
+  }
+}
+
+
+/*form*/
+.Contact-Section {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 60px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Title-Contac {
+  font-size: 50px;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.Contact-Form {
+  width: 100%;
+  max-width: 600px; /* Ancho ideal para que los inputs no se estiren demasiado */
+  background: rgba(255, 255, 255, 0.03); /* Efecto de tarjeta translúcida */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 40px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.Form-Group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.Form-Group label {
+  color: #c084fc; /* Tono lila para las etiquetas, haciendo juego con tu estilo */
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.Form-Group input,
+.Form-Group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  background: rgba(16, 23, 40, 0.6); /* Fondo oscuro translúcido */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+}
+
+.Form-Group input:focus,
+.Form-Group textarea:focus {
+  border-color: #9340ff; /* Resalta con tu color morado corporativo al escribir */
+  box-shadow: 0 0 10px rgba(147, 64, 255, 0.2);
+}
+
+.Form-Group textarea {
+  resize: vertical; /* Permite estirar el cuadro de texto solo hacia abajo si es necesario */
+}
+
+/* Estilo del botón de envío manteniendo el degradado anterior */
+.Submit-Btn {
+  background: linear-gradient(90deg, #9340ff 0%, #ff3c5f 100%);
+  color: #ffffff;
+  border: none;
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(147, 64, 255, 0.3);
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  /*align-self: flex-start; /* O puedes quitarlo si quieres que el botón ocupe todo el ancho */
+}
+
+.Submit-Btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 60, 95, 0.4);
+  filter: brightness(1.1);
+}
+
+/* Contenedor que alinea los iconos en fila horizontal y los centra */
+.Social-Icons-Row {
+  display: flex;
+  flex-direction: row;     /* Fuerza a que estén en fila */
+  justify-content: center; /* Los centra horizontalmente debajo del botón */
+  align-items: center;
+  gap: 20px;               /* Espacio entre el icono de LinkedIn y GitHub */
+  margin-top: 25px;        /* Separación respecto al botón de enviar */
+}
+
+/* Estilo para cada botón/icono individual */
+.Social-Icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;      /* Los hace circulares */
+  color: #c084fc;          /* Color lila inicial */
+  transition: all 0.3s ease;
+}
+
+/* Tamaño del SVG interno */
+.Social-Icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Efecto Hover al pasar el mouse por encima de los iconos */
+.Social-Icon:hover {
+  background: rgba(147, 64, 255, 0.2);
+  border-color: #9340ff;
+  color: #ff3c5f;          /* Cambia al tono fucsia de tu paleta */
+  transform: translateY(-3px); /* Se elevan sutilmente */
+  box-shadow: 0 4px 12px rgba(147, 64, 255, 0.3);
 }

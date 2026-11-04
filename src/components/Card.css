@@ -1,0 +1,79 @@
+.github-card {
+  background: rgba(255, 255, 255, 0.03); /* Efecto de tarjeta translúcida */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 28px;
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* Efecto hover elegante acorde a tu paleta (se eleva y cambia el borde) */
+.github-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(147, 64, 255, 0.5); /* Destello con tu tono morado */
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.folder-icon {
+  width: 36px;
+  height: 36px;
+  stroke: #c084fc; /* Tono lila claro para el icono principal */
+}
+
+.github-link {
+  color: #94a3b8;
+  transition: color 0.2s ease;
+}
+
+.github-link:hover {
+  color: #ff3c5f; /* Cambia al tono fucsia/rojizo de tu botón al pasar el mouse */
+}
+
+.external-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.project-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 12px 0;
+  text-align: left;
+}
+
+.project-description {
+  font-size: 14px;
+  color: #94a3b8; /* Gris elegante y legible */
+  line-height: 1.6;
+  margin: 0 0 24px 0;
+  text-align: left;
+}
+
+/* Etiquetas del Stack tecnológico al fondo de la tarjeta */
+.project-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.project-tech-stack span {
+  font-size: 12px;
+  font-weight: 600;
+  color: #c084fc;
+  background: rgba(147, 64, 255, 0.1);
+  padding: 4px 10px;
+  border-radius: 20px;
+}
